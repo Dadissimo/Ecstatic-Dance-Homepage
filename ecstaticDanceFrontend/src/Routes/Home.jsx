@@ -1,8 +1,8 @@
 import cosmicBackground from '../assets/cosmicBackground.jpg'
 import PropTypes from 'prop-types';
-import useData from './useData';
-import NextDance from './NextDance';
-import EventSummary from './EventSummary';
+import useData from '../components/useData';
+import NextDance from '../components/NextDance';
+import EventSummary from '../components/EventSummary';
 
 const Home = function({quote, title}) {
 	const[event] = useData('*[_type == "event"][0]{...,dj->,location->}');
@@ -33,7 +33,7 @@ const Home = function({quote, title}) {
 			</div>
 			<div className='flex justify-center items-center bg-gray-900 text-white w-full'>
 				<div className='w-8/12'>
-					<EventSummary {...event} />
+					<EventSummary event={event} />
 				</div>
 			</div>
 		</>

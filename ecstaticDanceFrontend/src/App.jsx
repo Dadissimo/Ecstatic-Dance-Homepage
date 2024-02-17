@@ -1,10 +1,14 @@
 // import Announcements from './Anouncements'
+// import Newsletter from './components/Newsletter'
 import Navigation from './components/Navigation'
 import './App.css'
-import Home from './components/Home'
 import useData from "./components/useData";
-// import Newsletter from './components/Newsletter'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Home from './Routes/Home'
+import NoPage from './Routes/NoPage';
+import Events from './Routes/Events';
+import Info from './Routes/Info';
 
 export default function App() {
   const [data] = useData('*[_type == "siteSettings"][0]');
@@ -12,11 +16,26 @@ export default function App() {
   if (!data) return;
 
   return (
-    <div className="text-4xl min-h-screen bg-gray-900">
-      <Navigation/>
-      <Home quote={data.quote} title={data.title} />
-      {/* <Newsletter /> */}
-      {/* <Announcements /> */}
+    <div className="min-h-screen bg-gray-900">
+		<Navigation/>
+		<BrowserRouter>
+			<Routes>
+				<Route index element={
+					<Home quote={data.quote} title={data.title} />
+				} />
+				<Route path='/events' element={
+					<Events />
+				} />
+				<Route path='/info' element={
+					<Info />
+				} />
+				<Route path='*' element={
+					<NoPage/>
+				} />
+			</Routes>
+		</BrowserRouter>
+		{/* <Newsletter /> */}
+		{/* <Announcements /> */}
     </div>
   )
 }

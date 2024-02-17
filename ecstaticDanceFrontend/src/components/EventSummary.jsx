@@ -1,7 +1,7 @@
 import {PortableText} from '@portabletext/react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const EventSummary = function(event) {
+const EventSummary = function({event, color = 'pink-950'}) {
     const {title, content, location} = event;
 
     const startDate = new Date(event.startDate);
@@ -18,7 +18,7 @@ const EventSummary = function(event) {
     const timestamp = `WHEN: ${formattedDate}, ${startHours}:${startMinutes} - ${endHours}:${endMinutes}`;
 
     return (
-        <div className='flex rounded-xl flex-col justify-self-center items-center bg-pink-950 p-4 m-4'>
+        <div className={`flex text-white rounded-xl flex-col justify-self-center items-center bg-${color} p-4 m-4`}>
             <div className='text-2xl mb-4'>
                 {title}
             </div>
@@ -38,7 +38,8 @@ const EventSummary = function(event) {
 }
 
 EventSummary.propTypes = {
-
+    event: PropTypes.instanceOf(Object),
+    color: PropTypes.string
 }
 
 export default EventSummary;

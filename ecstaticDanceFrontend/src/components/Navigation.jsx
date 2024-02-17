@@ -3,8 +3,8 @@ import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Events', href: '#', current: true },
-  { name: 'Info', href: '#', current: false },
+  { name: 'Events', href: 'events', current: true },
+  { name: 'Info', href: 'info', current: false },
   { name: 'Rules', href: '#', current: false },
   { name: 'DJs', href: '#', current: false },
   { name: 'Contact', href: '#', current: false },
@@ -40,7 +40,7 @@ export default function Example() {
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                     alt="Ecstatic Dance! Graz"
                   /> */}
-                  E.D!G
+                  <a href={'/#'}>E.D!G</a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
