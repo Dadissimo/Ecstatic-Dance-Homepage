@@ -9,6 +9,7 @@ import Home from './Routes/Home'
 import NoPage from './Routes/NoPage';
 import Events from './Routes/Events';
 import Info from './Routes/Info';
+import Djs from './Routes/Djs';
 
 export default function App() {
   const [data] = useData('*[_type == "siteSettings"][0]');
@@ -28,6 +29,9 @@ export default function App() {
 				} />
 				<Route path='/info' element={
 					<Info />
+				} />
+				<Route path='/crew' element={
+					<Djs />
 				} />
 				<Route path='*' element={
 					<NoPage/>

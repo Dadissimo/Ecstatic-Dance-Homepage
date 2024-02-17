@@ -9,8 +9,6 @@ const Info = function() {
 	if (!information) return null;
 
     const infos = information.map(entry => {
-        console.log(entry);
-
         return <InfoBlock key={entry._id} {...entry} />
     });
 	return (
