@@ -2,18 +2,18 @@ import {PortableText} from '@portabletext/react';
 import PropTypes from 'prop-types';
 
 import urlFor from '../urlFor';
-export default function InfoBlock({id, title, content, picture}) {
+export default function InfoBlock({title, content, picture}) {
     return (
-        <div id={id} className="relative isolate overflow-hidden bg-gray-900">
-            <div className="flex m-8 p-8">
-                <div className='flex flex-col mr-20'>
-                    <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">{title}</h2>
-                    <div className="mt-6 text-lg leading-8 text-gray-300">
+        <div className="bg-gray-900">
+            <div className="flex flex-col m-8 p-8">
+                <h2 className="text-4xl mb-4 font-bold tracking-tight text-white sm:text-6xl">{title}</h2>
+                <div className='flex flex-row'>
+                    <div className="mr-10 w-5/6 text-lg leading-8 text-gray-300">
                         <PortableText value={content} />
                     </div>
-                </div>
-                <div className='flex w-3/6'>
-                    {picture && <img src={urlFor(picture).url()} />}
+                    <div className='flex flex-col'>
+                        {picture && <img src={urlFor(picture).width(480).height(480).url()} />}
+                    </div>
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ import Home from './Routes/Home'
 import NoPage from './Routes/NoPage';
 import Events from './Routes/Events';
 import Info from './Routes/Info';
+import Rules from './Routes/Rules';
 import Djs from './Routes/Djs';
 
 export default function App() {
@@ -29,6 +30,9 @@ export default function App() {
 				} />
 				<Route path='/info' element={
 					<Info />
+				} />
+				<Route path='/rules' element={
+					<Rules />
 				} />
 				<Route path='/crew' element={
 					<Djs />

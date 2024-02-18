@@ -1,5 +1,4 @@
 // import cosmicBackground from '../assets/cosmicBackground.jpg'
-import PropTypes from 'prop-types';
 import useData from '../components/useData';
 import InfoBlock from "../components/InfoBlock";
 
@@ -16,11 +15,6 @@ const Info = function() {
 			{infos}
 		</div>
 	)
-}
-
-Info.propTypes = {
-	title: PropTypes.string,
-	quote: PropTypes.string
 }
 
 export default Info;
