@@ -1,4 +1,3 @@
-// import Announcements from './Anouncements'
 // import Newsletter from './components/Newsletter'
 import Navigation from './components/Navigation'
 import './App.css'
@@ -11,6 +10,7 @@ import Events from './Routes/Events';
 import Info from './Routes/Info';
 import Rules from './Routes/Rules';
 import Djs from './Routes/Djs';
+import Contact from './Routes/Contact';
 
 export default function App() {
   const [data] = useData('*[_type == "siteSettings"][0]');
@@ -37,13 +37,15 @@ export default function App() {
 				<Route path='/crew' element={
 					<Djs />
 				} />
+				<Route path='/contact' element={
+					<Contact />
+				} />
 				<Route path='*' element={
 					<NoPage/>
 				} />
 			</Routes>
 		</BrowserRouter>
 		{/* <Newsletter /> */}
-		{/* <Announcements /> */}
     </div>
   )
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import useData from '../components/useData';
 import NextDance from '../components/NextDance';
 import EventSummary from '../components/EventSummary';
+import Newsletter from '../components/Newsletter';
 
 const Home = function({quote, title}) {
 	const[event] = useData('*[_type == "event"][0]{...,dj->,location->}');
@@ -36,6 +37,7 @@ const Home = function({quote, title}) {
 					<EventSummary event={event} />
 				</div>
 			</div>
+			<Newsletter />
 		</>
 	)
 }

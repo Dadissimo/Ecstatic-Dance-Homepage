@@ -14,15 +14,15 @@ const CrewMember = function({crewMember}) {
 	return (
 		<div style={{width}} className='flex flex-col m-4 p-4 bg-gray-700'>
             {picture && <img src={urlFor(picture).width(width).height(height).url()} />}
-            <h2 className="text-2xl my-4 uppercase font-bold tracking-tight text-center text-white sm:text-4xl">{artistName}</h2>
-            <div className=' text-white'>
-                {bio}
-            </div>
-            <div className='mt-4 grid grid-cols-2'>
+            <h2 className="text-2xl my-4 uppercase font-bold tracking-tight text-white sm:text-4xl">{artistName}</h2>
+            <div className='mb-4 grid grid-cols-2'>
                 {instagram && <IconLink icon={faInstagram} text={instagram} url={`https://www.instagram.com/${instagram}`} />}
                 {facebook && <IconLink icon={faFacebook} text={facebook} url={`https://www.facebook.com/${facebook}`} />}
                 {soundcloud && <IconLink icon={faSoundcloud} text={soundcloud} url={`https://www.soundcloud.com/${soundcloud}`} />}
                 {homepage && <IconLink icon={faHouse} text={'Homepage'} url={homepage} />}
+            </div>
+            <div className=' text-white'>
+                {bio}
             </div>
 		</div>
 	)
