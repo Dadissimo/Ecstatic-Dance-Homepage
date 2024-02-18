@@ -8,7 +8,6 @@ const Djs = function() {
 
     if (!djs) return null;
 
-    djs.push(...djs);
     const artists = djs.map(dj => <CrewMember key={dj._id} crewMember={dj} />)
 
 	return (
