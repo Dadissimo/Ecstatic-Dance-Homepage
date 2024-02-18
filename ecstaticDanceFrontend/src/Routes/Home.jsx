@@ -1,11 +1,11 @@
-import cosmicBackground from '../assets/cosmicBackground.jpg'
 import PropTypes from 'prop-types';
 import useData from '../components/useData';
 import NextDance from '../components/NextDance';
 import EventSummary from '../components/EventSummary';
 import Newsletter from '../components/Newsletter';
+import urlFor from '../urlFor';
 
-const Home = function({quote, title}) {
+const Home = function({quote, title, banner}) {
 	const[event] = useData('*[_type == "event"][0]{...,dj->,location->}');
 
 	if (!event) return null;
@@ -15,7 +15,7 @@ const Home = function({quote, title}) {
 	return (
 		<>
 			<div className="relative isolate overflow-hidden bg-gray-900 py-18 sm:py-24">
-				<img src={ cosmicBackground } alt="Background Image"
+				<img src={ urlFor(banner).url() } alt="Background Image"
 					className="absolute opacity-50 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
 				/>
 				<div className="flex justify-center justify-items-center mx-auto max-w-7xl px-6 lg:px-8">
@@ -23,7 +23,7 @@ const Home = function({quote, title}) {
 						<h2 className="text-center text-4xl font-bold tracking-tight text-white sm:text-8xl">
 							{title}
 						</h2>
-						<p className="mt-6 text-xl text-white hidden lg:block">
+						<p className="mt-6 text-center text-2xl text-white hidden lg:block">
 							{quote}
 						</p>
 						<div className='mt-20'>
@@ -44,7 +44,8 @@ const Home = function({quote, title}) {
 
 Home.propTypes = {
 	title: PropTypes.string,
-	quote: PropTypes.string
+	quote: PropTypes.string,
+	banner: PropTypes.instanceOf(Object)
 }
 
 export default Home;

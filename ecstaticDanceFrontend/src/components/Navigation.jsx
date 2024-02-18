@@ -1,12 +1,15 @@
-// import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+
 const navigation = [
   { name: 'Events', href: 'events', current: false },
-  { name: 'Info', href: 'info', current: false },
-  { name: 'Rules', href: 'rules', current: false },
-  { name: 'DJs', href: 'crew', current: false },
+  { name: 'About Us', href: 'info', current: false },
+  { name: 'Dance Info', href: 'rules', current: false },
+  { name: 'Crew', href: 'crew', current: false },
   { name: 'Contact', href: 'contact', current: false },
 ]
 
@@ -34,13 +37,11 @@ export default function Navigation() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
-                <div className="flex flex-shrink-0 items-center text-white">
-                  {/* <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Ecstatic Dance! Graz"
-                  /> */}
-                  <a href={'/#'}>E.D!G</a>
+                <div className="flex text-2xl flex-shrink-0 items-center text-white">
+                  <a className='mr-2' href={'/#'}>E.D!G</a>
+                  <a href='https://www.facebook.com/urbanfishtank'>
+                    <FontAwesomeIcon fixedWidth color='white' size='md' icon={faFacebook} />
+                  </a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -50,7 +51,7 @@ export default function Navigation() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
+                          'rounded-md px-3 py-2 text-lg font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >

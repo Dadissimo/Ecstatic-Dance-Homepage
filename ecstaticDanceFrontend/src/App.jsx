@@ -13,9 +13,9 @@ import Djs from './Routes/Djs';
 import Contact from './Routes/Contact';
 
 export default function App() {
-  const [data] = useData('*[_type == "siteSettings"][0]');
+  const [siteData] = useData('*[_type == "siteSettings"][0]');
 
-  if (!data) return;
+  if (!siteData) return;
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -23,22 +23,22 @@ export default function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route index element={
-					<Home quote={data.quote} title={data.title} />
+					<Home banner={siteData.homeBanner} quote={siteData.quote} title={siteData.title} />
 				} />
 				<Route path='/events' element={
-					<Events />
+					<Events banner={siteData.eventBanner} />
 				} />
 				<Route path='/info' element={
 					<Info />
 				} />
 				<Route path='/rules' element={
-					<Rules />
+					<Rules banner={siteData.danceInfoBanner} />
 				} />
 				<Route path='/crew' element={
 					<Djs />
 				} />
 				<Route path='/contact' element={
-					<Contact />
+					<Contact banner={siteData.contactBanner} />
 				} />
 				<Route path='*' element={
 					<NoPage/>

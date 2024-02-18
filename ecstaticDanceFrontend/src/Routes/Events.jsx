@@ -1,11 +1,11 @@
+import PropTypes from 'prop-types';
 import EventSummary from "../components/EventSummary";
 import EventTimeline from "../components/EventTimeline";
 import useData from "../components/useData";
-import trance from '../assets/trance.jpg'
 import Location from "../components/Location";
+import urlFor from '../urlFor';
 
-
-const Events = function() {
+const Events = function({banner}) {
     const [events] = useData('*[_type == "event"] | order(startDate desc) {...,dj->,location->}');
     if (!events) return null;
 
@@ -16,7 +16,7 @@ const Events = function() {
     return (
         <>
             <div className="relative h-96 isolate overflow-hidden bg-gray-900 py-18 sm:py-24">
-                <img src={ trance } alt="Background Image"
+                <img src={ urlFor(banner).url() } alt="Background Image"
                     className="absolute opacity-20 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
                 />
                 <div className="flex justify-center">
@@ -38,6 +38,10 @@ const Events = function() {
             </div>
         </>
     )
+}
+
+Events.propTypes = {
+    banner: PropTypes.instanceOf(Object)
 }
 
 export default Events;

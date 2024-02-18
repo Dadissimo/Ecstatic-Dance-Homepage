@@ -1,6 +1,6 @@
-import rulesBackground from '../assets/rules.jpg'
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import useData from '../components/useData';
+import urlFor from '../urlFor';
 
 // eslint-disable-next-line react/prop-types
 const Rule = function({title, explanation}) {
@@ -16,7 +16,7 @@ const Rule = function({title, explanation}) {
     )
 }
 
-const Rules = function() {
+const Rules = function({banner}) {
 	const[rules] = useData('*[_type == "rule"]');
 
 	if (!rules) return null;
@@ -27,7 +27,7 @@ const Rules = function() {
 
 	return (
         <div className="relative isolate overflow-hidden bg-gray-900 py-18 sm:py-24">
-            <img src={ rulesBackground } alt="Background Image"
+            <img src={ urlFor(banner).url() } alt="Background Image"
                 className="absolute opacity-50 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
             />
             <div className='flex justify-center'>
@@ -40,6 +40,7 @@ const Rules = function() {
 }
 
 Rules.propTypes = {
+	banner: PropTypes.instanceOf(Object)
 }
 
 export default Rules;
