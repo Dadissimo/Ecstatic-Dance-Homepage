@@ -38,7 +38,7 @@ export default function Navigation() {
               </div>
               <div className="flex flex-1 items-center justify-between sm:items-stretch sm:justify-between">
                 <div className="flex text-2xl flex-shrink-0 items-center text-white">
-                  <a className='mr-2' href={'/#'}>E.D!G</a>
+                  <a className='mr-2' href={'/#'}>Home</a>
                   <a href='https://www.facebook.com/urbanfishtank'>
                     <FontAwesomeIcon fixedWidth color='white' icon={faFacebook} />
                   </a>
