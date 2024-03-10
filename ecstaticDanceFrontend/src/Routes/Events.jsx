@@ -17,13 +17,13 @@ const Events = function({banner}) {
     // const summaries = events.map(event => <EventSummary key={ event._id } {...event} />)
     return (
         <>
-            <div className="relative h-96 isolate overflow-hidden bg-gray-900 py-8 sm:py-18">
+            <div className="relative sm:h-96 isolate overflow-hidden bg-gray-900 py-8 sm:py-18">
                 <img src={ urlFor(banner).url() } alt="Background Image"
                     className="absolute opacity-20 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
                 />
                 <div className="flex justify-center h-full">
-                    <div className="flex flex-row w-8/12">
-                        <div className="w-8/12">
+                    <div className="flex flex-col sm:flex-row sm:w-8/12">
+                        <div className="sm:w-8/12">
                             <EventSummary event={currentEvent} color="none" />
                         </div>
                         <div className="flex flex-1 flex-grow">
@@ -32,7 +32,7 @@ const Events = function({banner}) {
                     </div>
                 </div>
             </div>
-            <div className={`flex text-white rounded-xl flex-col justify-self-center items-center bg-pink-950 p-4 m-4 mx-48`}>
+            <div className={`flex text-white rounded-xl flex-col justify-self-center items-center bg-pink-950 p-4 m-4 sm:mx-48`}>
                 <div className='text-lg py-4'>
                     <PortableText value={currentEvent.news} />
                 </div>

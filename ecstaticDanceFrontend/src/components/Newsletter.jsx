@@ -19,7 +19,7 @@ export default function Newsletter() {
                         type="email"
                         autoComplete="email"
                         required
-                        style={{width: 400}}
+                        style={{width: 300}}
                         placeholder="Enter you email"
                     />
                     <button
