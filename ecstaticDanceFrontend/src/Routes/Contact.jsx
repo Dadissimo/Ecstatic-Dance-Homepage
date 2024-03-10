@@ -12,10 +12,10 @@ const Contact = ({banner}) => {
                     className="absolute opacity-50 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
                 />
                 <div className='flex flex-col justify-center align-middle h-full'>
-                    <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                    <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-900 text-white">
                         Contact Us
                     </div>
-                    <p className="font-light text-center dark:text-gray-200 sm:text-xl">
+                    <p className="font-light text-center text-gray-200 sm:text-xl">
                         Got any questions? Let us know.
                     </p>
                     <div className='mt-4 flex justify-center items-center'>
