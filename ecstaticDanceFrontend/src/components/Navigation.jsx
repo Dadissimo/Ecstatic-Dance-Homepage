@@ -7,8 +7,8 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const navigation = [
   { name: 'Events', href: 'events', current: false },
-  { name: 'About Us', href: 'info', current: false },
-  { name: 'Dance Info', href: 'rules', current: false },
+  { name: 'Info', href: 'info', current: false },
+  // { name: 'Dances', href: 'rules', current: false },
   { name: 'Crew', href: 'crew', current: false },
   { name: 'Contact', href: 'contact', current: false },
 ]
@@ -40,7 +40,7 @@ export default function Navigation() {
                 <div className="flex text-2xl flex-shrink-0 items-center text-white">
                   <a className='mr-2' href={'/#'}>E.D!G</a>
                   <a href='https://www.facebook.com/urbanfishtank'>
-                    <FontAwesomeIcon fixedWidth color='white' size='md' icon={faFacebook} />
+                    <FontAwesomeIcon fixedWidth color='white' icon={faFacebook} />
                   </a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">

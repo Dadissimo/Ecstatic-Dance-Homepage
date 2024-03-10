@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import useData from '../components/useData';
 import NextDance from '../components/NextDance';
-import EventSummary from '../components/EventSummary';
+// import EventSummary from '../components/EventSummary';
 import Newsletter from '../components/Newsletter';
 import urlFor from '../urlFor';
 
@@ -32,11 +32,11 @@ const Home = function({quote, title, banner}) {
 					</div>
 				</div>
 			</div>
-			<div className='flex justify-center items-center bg-gray-900 text-white w-full'>
+			{/* <div className='flex justify-center items-center bg-gray-900 text-white w-full'>
 				<div className='w-8/12'>
 					<EventSummary event={event} />
 				</div>
-			</div>
+			</div> */}
 			<Newsletter />
 		</>
 	)

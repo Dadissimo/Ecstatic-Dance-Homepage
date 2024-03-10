@@ -7,21 +7,23 @@ import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 const Contact = ({banner}) => {
     return (
         <>
-            <div className="relative isolate overflow-hidden bg-gray-900 py-18 sm:py-24">
+            <div className="relative h-96 isolate overflow-hidden bg-gray-900 py-8 sm:py-18">
                 <img src={ urlFor(banner).url() } alt="Background Image"
                     className="absolute opacity-50 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
                 />
-                <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-                    Contact Us
-                </h2>
-                <p className="font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
-                    Got any questions? Let us know.
-                </p>
-                <div className='mt-4 flex justify-center items-center'>
-                    <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
-                    <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">
-                        info@ecstaticdance-graz.at
-                    </a>
+                <div className='flex flex-col justify-center align-middle h-full'>
+                    <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
+                        Contact Us
+                    </div>
+                    <p className="font-light text-center dark:text-gray-200 sm:text-xl">
+                        Got any questions? Let us know.
+                    </p>
+                    <div className='mt-4 flex justify-center items-center'>
+                        <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
+                        <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">
+                            info@ecstaticdance-graz.at
+                        </a>
+                    </div>
                 </div>
             </div>
             {/* <section className="bg-white dark:bg-gray-900">

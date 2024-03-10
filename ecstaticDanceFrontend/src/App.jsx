@@ -8,7 +8,7 @@ import Home from './Routes/Home'
 import NoPage from './Routes/NoPage';
 import Events from './Routes/Events';
 import Info from './Routes/Info';
-import Rules from './Routes/Rules';
+// import Rules from './Routes/Rules';
 import Djs from './Routes/Djs';
 import Contact from './Routes/Contact';
 
@@ -29,11 +29,11 @@ export default function App() {
 					<Events banner={siteData.eventBanner} />
 				} />
 				<Route path='/info' element={
-					<Info />
+					<Info banner={siteData.danceInfoBanner}/>
 				} />
-				<Route path='/rules' element={
+				{/* <Route path='/rules' element={
 					<Rules banner={siteData.danceInfoBanner} />
-				} />
+				} /> */}
 				<Route path='/crew' element={
 					<Djs />
 				} />

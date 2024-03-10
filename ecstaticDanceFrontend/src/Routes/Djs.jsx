@@ -8,7 +8,7 @@ const Djs = function() {
 
     if (!djs) return null;
 
-    const artists = djs.map(dj => <CrewMember key={dj._id} crewMember={dj} />)
+    const artists = djs.filter(dj => !dj.isGuest).map(dj => <CrewMember key={dj._id} crewMember={dj} />);
 
 	return (
 		<div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3'>
