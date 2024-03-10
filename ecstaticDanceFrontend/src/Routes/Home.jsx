@@ -14,7 +14,7 @@ const Home = function({quote, title, banner}) {
 
 	return (
 		<>
-			<div className="relative isolate overflow-hidden bg-gray-900 py-18 sm:py-24">
+			<div className="relative isolate overflow-hidden bg-gray-900 py-36 sm:py-24">
 				<img src={ urlFor(banner).url() } alt="Background Image"
 					className="absolute opacity-50 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
 				/>
@@ -26,7 +26,7 @@ const Home = function({quote, title, banner}) {
 						<p className="mt-6 text-center text-2xl text-white hidden lg:block">
 							{quote}
 						</p>
-						<div className='mt-20'>
+						<div className='mt-8 sm:mt-20'>
 							<NextDance nextDate={date} />
 						</div>
 					</div>

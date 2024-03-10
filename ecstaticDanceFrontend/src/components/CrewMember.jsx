@@ -12,7 +12,7 @@ const CrewMember = function({crewMember}) {
     const height = 480;
 
 	return (
-		<div style={{width}} className='flex flex-col m-4 p-4 bg-gray-700'>
+		<div className='flex flex-col m-4 p-4 bg-gray-700 w-5/6 lg:w-3/4'>
             {picture && <img src={urlFor(picture).width(width).height(height).url()} />}
             <h2 className="text-2xl my-4 uppercase font-bold tracking-tight text-white sm:text-4xl">{artistName}</h2>
             <div className='mb-4 grid grid-cols-2'>
