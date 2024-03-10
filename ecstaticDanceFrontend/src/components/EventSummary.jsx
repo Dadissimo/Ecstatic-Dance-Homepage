@@ -27,6 +27,9 @@ const EventSummary = function({event, color = 'pink-950'}) {
                     {timestamp}
                 </div>
                 <div>
+                    {'DJ: ' + event.dj.artistName}
+                </div>
+                <div>
                     {'WHERE: ' + location.name}
                 </div>
             </div>

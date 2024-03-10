@@ -16,7 +16,7 @@ const NextDance = function({nextDate}) {
                 {formattedDate}
             </div>
             <a
-                href='/info'
+                href='/events'
                 className="flex flex-row items-center rounded-xl bg-gray-900 hover:bg-gray-700 hover:cursor-pointer px-6 py-2 text-lg font-medium uppercase leading-normal text-white">
                 {'More infos'}
                 <ChevronDoubleRightIcon className="ml-1 block h-6 w-6" aria-hidden="true" />
