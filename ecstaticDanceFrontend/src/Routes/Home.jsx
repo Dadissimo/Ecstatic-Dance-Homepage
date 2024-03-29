@@ -5,6 +5,7 @@ import NextDance from '../components/NextDance';
 import Newsletter from '../components/Newsletter';
 import urlFor from '../urlFor';
 
+
 const Home = function({siteData}) {
 	const {homeBanner} = siteData;
 	const[event] = useData('*[_type == "event"][0]{...,dj->,location->}');

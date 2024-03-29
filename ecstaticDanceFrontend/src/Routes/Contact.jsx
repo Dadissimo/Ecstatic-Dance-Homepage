@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
+import Newsletter from '../components/Newsletter';
 
 const Contact = ({banner}) => {
     return (
@@ -17,6 +18,9 @@ const Contact = ({banner}) => {
                     </a>
                 </div>
             </Banner>
+            <div className='bg-gray-900 rounded-md mt-24 lg:mt-6 opacity-95'>
+                <Newsletter />
+            </div>
             {/* <section className="bg-white dark:bg-gray-900">
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                     <form action="#" className="space-y-8">

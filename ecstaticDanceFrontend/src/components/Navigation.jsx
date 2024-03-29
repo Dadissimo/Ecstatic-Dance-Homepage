@@ -5,12 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
+import { useLocation } from 'react-router';
+
+
 const navigation = [
-  { name: 'Events', href: 'events', current: false },
-  { name: 'Info', href: 'info', current: false },
-  // { name: 'Dances', href: 'rules', current: false },
-  { name: 'Crew', href: 'crew', current: false },
-  { name: 'Contact', href: 'contact', current: false },
+  { name: 'Events', href: 'events'},
+  { name: 'Info', href: 'info' },
+  { name: 'About', href: 'about' },
+  { name: 'Crew', href: 'crew' },
+  { name: 'Contact', href: 'contact' },
 ]
 
 function classNames(...classes) {
@@ -18,6 +21,10 @@ function classNames(...classes) {
 }
 
 export default function Navigation() {
+	const {pathname} = useLocation();
+
+  const isActive = href => (pathname === ('/' + href));
+  
   return (
     <Disclosure as="nav" className="bg-gray-900">
       {({ open }) => (
@@ -50,10 +57,10 @@ export default function Navigation() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          isActive(item.href) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-lg font-medium'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={isActive(item.href) ? 'page' : undefined}
                       >
                         {item.name}
                       </a>

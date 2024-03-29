@@ -8,12 +8,12 @@ import IconLink from './IconLink';
 const CrewMember = function({crewMember}) {
     const {picture, artistName, bio, soundcloud, instagram, facebook, homepage, role} = crewMember;
 
-    const width = 480;
-    const height = 480;
+    const width = 960;
+    const height = 960;
 
 	return (
         <div className='flex justify-center'>
-            <div className='flex flex-col m-4 p-4 bg-gray-700 w-5/6 lg:w-3/4'>
+            <div className='flex flex-col rounded-md m-4 p-4 bg-gray-700 w-5/6 lg:w-3/4'>
                 {picture && <img alt={'Image of ' + artistName} src={urlFor(picture).width(width).height(height).url()} />}
                 <h2 className="text-2xl mt-4 uppercase font-bold tracking-tight text-white sm:text-4xl">{artistName}</h2>
                 <h3 className='text-lg mb-4 uppercase text-white'>{role.name}</h3>

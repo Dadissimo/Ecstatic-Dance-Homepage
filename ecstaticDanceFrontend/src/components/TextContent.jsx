@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import {PortableText} from '@portabletext/react';
 
-const TextContent = function({content, type = 'important'}) {
+const TextContent = function({content, type}) {
     if (!content) return null;
     
     if (type === 'important') {

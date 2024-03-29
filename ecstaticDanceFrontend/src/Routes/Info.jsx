@@ -5,6 +5,7 @@ import InfoBlock from "../components/InfoBlock";
 
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
+import TextContent from '../components/TextContent';
 
 const Info = function({banner}) {
 	const[information] = useData('*[_type == "information"]');
@@ -20,7 +21,10 @@ const Info = function({banner}) {
 			<Banner image={banner} alt={banner.caption}>#
                 <Heading title={banner.title} subTitle={banner.subTitle} />
             </Banner>
-			{infos}
+			<TextContent content={banner.text} type='important'/>
+			<div className='grid grid-cols-1 xl:grid-cols-2'>
+				{infos}
+			</div>
 		</>
 	)
 }

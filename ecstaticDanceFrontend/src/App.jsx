@@ -1,4 +1,3 @@
-// import Newsletter from './components/Newsletter'
 import Navigation from './components/Navigation'
 import './App.css'
 import useData from "./components/useData";
@@ -8,9 +7,9 @@ import Home from './Routes/Home'
 import NoPage from './Routes/NoPage';
 import Events from './Routes/Events';
 import Info from './Routes/Info';
-// import Rules from './Routes/Rules';
 import Crew from './Routes/Crew';
 import Contact from './Routes/Contact';
+import AboutUs from './Routes/AboutUs';
 
 export default function App() {
   const [siteData] = useData('*[_type == "siteSettings"][0]');
@@ -19,8 +18,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-900">
-		<Navigation/>
 		<BrowserRouter>
+			<Navigation/>
 			<Routes>
 				<Route index element={
 					<Home siteData={siteData} />
@@ -31,9 +30,9 @@ export default function App() {
 				<Route path='/info' element={
 					<Info banner={siteData.danceInfoBanner}/>
 				} />
-				{/* <Route path='/rules' element={
-					<Rules banner={siteData.danceInfoBanner} />
-				} /> */}
+				<Route path='/about' element={
+					<AboutUs siteData={siteData}/>
+				} />
 				<Route path='/crew' element={
 					<Crew siteData={siteData}/>
 				} />
@@ -45,7 +44,6 @@ export default function App() {
 				} />
 			</Routes>
 		</BrowserRouter>
-		{/* <Newsletter /> */}
     </div>
   )
 }
