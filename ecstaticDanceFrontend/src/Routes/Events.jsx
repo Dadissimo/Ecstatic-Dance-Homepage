@@ -15,8 +15,6 @@ const Events = function({banner}) {
     const currentEvent = events[0];
     const previousEvents = events.filter(event => event._id !== currentEvent._id);
 
-    // const summaries = events.map(event => <EventSummary key={ event._id } {...event} />)
-
     return (
         <>
             <Banner image={banner} alt={banner.caption}>#
@@ -32,11 +30,11 @@ const Events = function({banner}) {
                     </div>
                 </div>
             </div>
-            <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
+            {currentEvent.news && <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
                 <div className='text-lg py-4'>
                     <PortableText value={currentEvent.news} />
                 </div>
-            </div>
+            </div>}
             <div className="uppercase p-4 text-4xl text-center text-white">
                 {'Previous Dances'}
             </div>

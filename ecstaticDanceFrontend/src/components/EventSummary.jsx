@@ -1,6 +1,12 @@
 import {PortableText} from '@portabletext/react';
 import PropTypes from 'prop-types';
 
+function getHref(event) {
+    if (event.dj.isGuest) return event.dj.url;
+    if (event.dj.homepage) return event.dj.homepage;
+    return '/crew';
+}
+
 const EventSummary = function({event, color = 'pink-950'}) {
     const {title, content, location} = event;
 
@@ -19,6 +25,9 @@ const EventSummary = function({event, color = 'pink-950'}) {
     const djStamp = `${event.dj.artistName}`;
     const locationStamp = `${location.name}`;
 
+    const djHref = getHref(event);
+    console.log(djHref);
+
     return (
         <div className={`flex text-white rounded-xl flex-col bg-${color} p-4 m-4`}>
             <h1 className='text-2xl mb-4'>
@@ -32,7 +41,7 @@ const EventSummary = function({event, color = 'pink-950'}) {
                 </div>
                 <div className='flex flex-col'>
                     <div>{timestamp}</div>
-                    <a className='underline' href='/crew'>{djStamp}</a>
+                    <a className='underline' href={djHref}>{djStamp}</a>
                     <div>{locationStamp}</div>
                 </div>
             </h2>

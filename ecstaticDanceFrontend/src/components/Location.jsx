@@ -9,7 +9,7 @@ const Location = function({location, color = 'pink-950'}) {
             <div className='text-2xl mb-4'>
                 {location.name}
             </div>
-            <IconLink icon={faMapLocation} text={location.address} url={location.googleMapLink}/>
+            {location.googleMapLink && <IconLink icon={faMapLocation} text={location.address} url={location.googleMapLink}/>}
             <div className='text-sm mt-2'>
                 {location.description}
             </div>
