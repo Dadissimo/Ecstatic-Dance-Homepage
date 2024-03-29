@@ -23,7 +23,7 @@ export default function App() {
 		<BrowserRouter>
 			<Routes>
 				<Route index element={
-					<Home banner={siteData.homeBanner} quote={siteData.quote} title={siteData.title} />
+					<Home siteData={siteData} />
 				} />
 				<Route path='/events' element={
 					<Events banner={siteData.eventBanner} />

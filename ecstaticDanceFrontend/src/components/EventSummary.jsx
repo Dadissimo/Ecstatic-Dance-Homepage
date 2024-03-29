@@ -15,25 +15,28 @@ const EventSummary = function({event, color = 'pink-950'}) {
     const endHours = event.endDate ? endDate.getHours() : startHours + 3;
     const endMinutes = event.endDate ? endDate.getMinutes() : startMinutes;
 
-    const timestamp = `WHEN: ${formattedDate}, ${startHours}:${startMinutes} - ${endHours}:${endMinutes}`;
+    const timestamp = `${formattedDate}, ${startHours}:${startMinutes} - ${endHours}:${endMinutes}`;
+    const djStamp = `${event.dj.artistName}`;
+    const locationStamp = `${location.name}`;
 
     return (
-        <div className={`flex text-white rounded-xl flex-col justify-self-center items-center bg-${color} p-4 m-4`}>
-            <div className='text-2xl mb-4'>
+        <div className={`flex text-white rounded-xl flex-col bg-${color} p-4 m-4`}>
+            <h1 className='text-2xl mb-4'>
                 {title}
-            </div>
-            <div className='flex w-full italic flex-row justify-between text-sm'>
-                <div>
-                    {timestamp}
+            </h1>
+            <h2 className='flex flex-row xl:w-3/5 justify-between text-lg'>
+                <div className='flex flex-col'>
+                    <div>{'WHEN'}</div>
+                    <div>{'WHO'}</div>
+                    <div>{'WHERE'}</div>
                 </div>
-                <div>
-                    {'DJ: ' + event.dj.artistName}
+                <div className='flex flex-col'>
+                    <div>{timestamp}</div>
+                    <a className='underline' href='/crew'>{djStamp}</a>
+                    <div>{locationStamp}</div>
                 </div>
-                <div>
-                    {'WHERE: ' + location.name}
-                </div>
-            </div>
-            <div className='text-lg py-4'>
+            </h2>
+            <div className='text-md py-4'>
                 <PortableText value={content} />
             </div>
         </div>

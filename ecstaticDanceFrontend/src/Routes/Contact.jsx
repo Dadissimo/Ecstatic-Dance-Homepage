@@ -1,31 +1,26 @@
 import PropTypes from 'prop-types';
-import urlFor from '../urlFor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import Banner from '../components/Banner';
 
 const Contact = ({banner}) => {
     return (
         <>
-            <div className="relative h-96 isolate overflow-hidden bg-gray-900 py-8 sm:py-18">
-                <img src={ urlFor(banner).url() } alt="Background Image"
-                    className="absolute opacity-50 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-                />
-                <div className='flex flex-col justify-center align-middle h-full'>
-                    <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-gray-900 text-white">
-                        Contact Us
-                    </div>
-                    <p className="font-light text-center text-gray-200 sm:text-xl">
-                        Got any questions? Let us know.
-                    </p>
-                    <div className='mt-4 flex justify-center items-center'>
-                        <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
-                        <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">
-                            info@ecstaticdance-graz.at
-                        </a>
-                    </div>
+            <Banner image={banner} alt={'XXX'}>
+                <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white">
+                    Contact Us
                 </div>
-            </div>
+                <p className="font-light text-center text-gray-200 sm:text-xl">
+                    Got any questions? Let us know.
+                </p>
+                <div className='mt-4 flex justify-center items-center'>
+                    <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
+                    <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">
+                        info@ecstaticdance-graz.at
+                    </a>
+                </div>
+            </Banner>
             {/* <section className="bg-white dark:bg-gray-900">
                 <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                     <form action="#" className="space-y-8">
