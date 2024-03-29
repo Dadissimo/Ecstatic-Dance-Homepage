@@ -23,7 +23,7 @@ const AboutUs = function({siteData}) {
                 <Heading title={aboutUsBanner.title} subTitle={aboutUsBanner.subTitle} />
             </Banner>
 			<TextContent content={aboutUsBanner.text} type='important'/>
-			<div className='grid grid-cols-1 xl:grid-cols-2'>
+			<div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3'>
 				{infos}
 			</div>
 		</>

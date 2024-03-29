@@ -16,7 +16,7 @@ const Home = function({siteData}) {
 
 	return (
 		<>
-			<div className="relative isolate overflow-hidden bg-gray-900 py-36 sm:py-24">
+			<div className="relative isolate overflow-hidden bg-gray-900 py-20 lg:py-32">
 				<img src={ urlFor(homeBanner).url() } alt={homeBanner.caption}
 					className="absolute opacity-70 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
 				/>

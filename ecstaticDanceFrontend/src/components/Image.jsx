@@ -2,11 +2,14 @@ import PropTypes from 'prop-types';
 import urlFor from '../urlFor';
 
 const Image = ({image, alt = 'Image'}) => {
+    if (!image) return null;
+
+    const width = 960;
+    const height = 960;
+
     return (
-        <div className="relative h-96 isolate overflow-hidden bg-gray-900">
-            {image && <img src={ urlFor(image).url() } alt={alt}
-                className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-            />}
+        <div className=" bg-gray-900">
+            <img alt={alt} src={urlFor(image).width(width).height(height).url()} />
         </div>
     )
 }
