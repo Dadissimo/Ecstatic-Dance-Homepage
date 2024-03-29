@@ -1,5 +1,5 @@
-import {PortableText} from '@portabletext/react';
 import PropTypes from 'prop-types';
+import TextContent from './TextContent';
 
 function getHref(event) {
     if (event.dj.isGuest) return event.dj.url;
@@ -46,7 +46,7 @@ const EventSummary = function({event, color = 'pink-950'}) {
                 </div>
             </h2>
             <div className='text-md py-4'>
-                <PortableText value={content} />
+                <TextContent content={content} />
             </div>
         </div>
     )

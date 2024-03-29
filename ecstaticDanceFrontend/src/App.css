@@ -6,3 +6,11 @@
 body {
     font-family: 'Aptos';
 }
+
+.text-content p {
+    margin: 8px
+}
+
+.text-content li {
+    list-style-type: disc;
+}

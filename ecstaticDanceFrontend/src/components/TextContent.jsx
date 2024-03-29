@@ -8,14 +8,18 @@ const TextContent = function({content, type}) {
     if (type === 'important') {
         return (
             <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
-                <div className='text-lg py-4'>
+                <div className='text-content text-lg py-4'>
                     <PortableText value={content} />
                 </div>
             </div>
         )
     }
     
-    return <PortableText value={content} />
+    return (
+        <div className='text-content'>
+            <PortableText value={content} />
+        </div>
+    );
 }
 
 TextContent.propTypes = {

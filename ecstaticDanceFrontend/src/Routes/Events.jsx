@@ -4,9 +4,9 @@ import EventTimeline from "../components/EventTimeline";
 import useData from "../components/useData";
 import Location from "../components/Location";
 
-import {PortableText} from '@portabletext/react';
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
+import TextContent from '../components/TextContent';
 
 const Events = function({banner}) {
     const [events] = useData('*[_type == "event"] | order(startDate desc) {...,dj->,location->}');
@@ -32,7 +32,7 @@ const Events = function({banner}) {
             </div>
             {currentEvent.news && <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
                 <div className='text-lg py-4'>
-                    <PortableText value={currentEvent.news} />
+                    <TextContent content={currentEvent.news} />
                 </div>
             </div>}
             <div className="uppercase p-4 text-4xl text-center text-white">
