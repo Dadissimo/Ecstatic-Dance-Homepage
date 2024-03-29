@@ -6,6 +6,7 @@ import Location from "../components/Location";
 
 import {PortableText} from '@portabletext/react';
 import Banner from '../components/Banner';
+import Heading from '../components/Heading';
 
 const Events = function({banner}) {
     const [events] = useData('*[_type == "event"] | order(startDate desc) {...,dj->,location->}');
@@ -15,13 +16,12 @@ const Events = function({banner}) {
     const previousEvents = events.filter(event => event._id !== currentEvent._id);
 
     // const summaries = events.map(event => <EventSummary key={ event._id } {...event} />)
+
     return (
         <>
-        <Banner image={banner} alt={'XXX'}>#
-            <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white">
-                {'Events'}
-            </div>
-        </Banner>
+            <Banner image={banner} alt={banner.caption}>#
+                <Heading title={banner.title} subTitle={banner.subTitle} />
+            </Banner>
             <div className="flex justify-center h-full">
                 <div className="flex flex-col xl:flex-row sm:w-8/12">
                     <div className="sm:w-8/12">

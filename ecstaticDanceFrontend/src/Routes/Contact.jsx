@@ -3,17 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import Banner from '../components/Banner';
+import Heading from '../components/Heading';
 
 const Contact = ({banner}) => {
     return (
         <>
             <Banner image={banner} alt={'XXX'}>
-                <div className="mb-4 text-6xl tracking-tight font-extrabold text-center text-white">
-                    Contact Us
-                </div>
-                <p className="font-light text-center text-gray-200 sm:text-xl">
-                    Got any questions? Let us know.
-                </p>
+                <Heading title={banner.title} subTitle={banner.subTitle}/>
                 <div className='mt-4 flex justify-center items-center'>
                     <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
                     <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">

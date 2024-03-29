@@ -9,7 +9,7 @@ import NoPage from './Routes/NoPage';
 import Events from './Routes/Events';
 import Info from './Routes/Info';
 // import Rules from './Routes/Rules';
-import Djs from './Routes/Djs';
+import Crew from './Routes/Crew';
 import Contact from './Routes/Contact';
 
 export default function App() {
@@ -35,7 +35,7 @@ export default function App() {
 					<Rules banner={siteData.danceInfoBanner} />
 				} /> */}
 				<Route path='/crew' element={
-					<Djs />
+					<Crew siteData={siteData}/>
 				} />
 				<Route path='/contact' element={
 					<Contact banner={siteData.contactBanner} />
