@@ -1,4 +1,3 @@
-import Navigation from './components/Navigation'
 import './App.css'
 import useData from "./components/useData";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -10,6 +9,7 @@ import Info from './Routes/Info';
 import Crew from './Routes/Crew';
 import Contact from './Routes/Contact';
 import AboutUs from './Routes/AboutUs';
+import Navigation from './components/navigation/Navigation';
 
 export default function App() {
   const [siteData] = useData('*[_type == "siteSettings"][0]');

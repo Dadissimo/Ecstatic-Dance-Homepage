@@ -14,7 +14,7 @@ const Location = function({location, color = 'pink-950'}) {
                 {location.description}
             </div>
             <div className='flex justify-center mt-2'>
-                {location.picture && <img src={urlFor(location.picture).height(320).url()} />}
+                {location.picture && <img alt={location.picture.caption} src={urlFor(location.picture).height(320).url()} />}
             </div>
         </div>
     )

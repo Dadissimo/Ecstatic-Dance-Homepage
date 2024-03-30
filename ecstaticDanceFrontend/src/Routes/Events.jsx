@@ -22,25 +22,22 @@ const Events = function({banner}) {
             </Banner>
             <div className="flex justify-center h-full">
                 <div className="flex flex-col xl:flex-row sm:w-8/12">
-                    <div className="sm:w-8/12">
+                    <div className="rounded-md m-4 bg-gray-700 sm:w-8/12">
                         <EventSummary event={currentEvent} color="none" />
                     </div>
-                    <div className="flex flex-1 flex-grow justify-center xl:justify-normal">
+                    <div className="flex flex-1 flex-grow rounded-md m-4 bg-gray-700 justify-center xl:justify-normal">
                         <Location location={currentEvent.location} color="none"/>
                     </div>
                 </div>
             </div>
-            {currentEvent.news && <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
-                <div className='text-lg py-4'>
-                    <TextContent content={currentEvent.news} />
+            {
+                currentEvent.news && <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
+                    <div className='text-lg py-4'>
+                        <TextContent content={currentEvent.news} />
+                    </div>
                 </div>
-            </div>}
-            <div className="uppercase p-4 text-4xl text-center text-white">
-                {'Previous Dances'}
-            </div>
-            <div className="flex justify-center pb-16">
-                <EventTimeline events={previousEvents} />
-            </div>
+            }
+            <EventTimeline events={previousEvents} />
         </>
     )
 }

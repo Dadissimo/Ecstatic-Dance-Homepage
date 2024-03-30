@@ -19,11 +19,19 @@ const Event = function(event) {
 const EventTimeline = function({events}) {
     const renderedEvents = events.map(event => {
         return (<Event key={event._id} {...event} />);
-    })
+    });
+    
     return (
-        <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
-            {renderedEvents}
-        </ol>
+        <>
+            <div className="uppercase p-4 text-4xl text-center text-white">
+                {'Previous Dances'}
+            </div>
+            <div className="flex justify-center pb-16">
+                <ol className="relative border-s border-gray-200 dark:border-gray-700">                  
+                    {renderedEvents}
+                </ol>
+            </div>
+        </>
     )
 }
 
