@@ -18,7 +18,7 @@ const MobileNavigation = ({navigation}) => {
                 <div className="absolute top-0 right-0 px-8 py-8" onClick={() => setIsNavOpen(false)}>
                     <XMarkIcon className="text-white animate-pulse block h-8 w-8" aria-hidden="true" />
                 </div>
-                <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
+                <ul className="flex flex-col items-center justify-between min-h-[250px]">
                     {navigation.map(item => {
                         return (
                             <li key={item.name} className="border-b border-gray-400 my-8 uppercase" 
