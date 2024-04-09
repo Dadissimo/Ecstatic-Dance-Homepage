@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import TextContent from './TextContent';
 
 import Image from './Image';
-// eslint-disable-next-line no-unused-vars
-export default function InfoBlock({title, content, picture, expandedOnDefault}) {
+export default function InfoBlock({title, content, picture}) {
     return (
         <div className='flex flex-col m-4 sm:p-4 rounded-md bg-gray-700'>
             <div className="flex flex-col mx-8 sm:p-4">

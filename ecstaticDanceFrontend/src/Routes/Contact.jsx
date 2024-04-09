@@ -10,18 +10,20 @@ import TextContent from '../components/TextContent';
 const Contact = ({banner}) => {
     return (
         <>
-            <Banner image={banner} alt={'XXX'}>
+            <Banner image={banner} alt={banner.caption}>
                 <Heading title={banner.title} subTitle={banner.subTitle}/>
                 <div className='mt-4 flex justify-center items-center'>
                     <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
                     <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">
-                        info@ecstaticdance-graz.at
+                        {'info@ecstaticdance-graz.at'}
                     </a>
                 </div>
             </Banner>
-            <TextContent content={banner.text} type='important'/>
             <div className='bg-gray-900 rounded-md mt-24 lg:mt-6 opacity-95'>
                 <Newsletter />
+            </div>
+            <div className='bg-gray-900 pb-16'>
+                <TextContent content={banner.text} type='important'/>
             </div>
         </>
     )

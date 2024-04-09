@@ -8,7 +8,7 @@ import urlFor from '../urlFor';
 
 const Home = function({siteData}) {
 	const {homeBanner} = siteData;
-	const[event] = useData('*[_type == "event"][0]{...,dj->,location->}');
+	const[event] = useData('*[_type == "event"] | order(startDate desc)[0]{...,dj->,location->}');
 
 	if (!event) return null;
 
@@ -18,7 +18,8 @@ const Home = function({siteData}) {
 		<main>
 			<div className="relative isolate overflow-hidden bg-gray-900 py-20 lg:py-32">
 				<img src={ urlFor(homeBanner).url() } alt={homeBanner.caption}
-					className="absolute opacity-70 inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+					className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+					style={{opacity: homeBanner.opacity / 100}}
 				/>
 				<div className="flex justify-center justify-items-center mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="flex flex-col justify-center justify-items-center mx-auto max-w-4xl lg:mx-0">

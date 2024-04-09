@@ -19,7 +19,7 @@ const AboutUs = function({siteData}) {
 
 	return (
 		<>
-			<Banner image={aboutUsBanner} alt={aboutUsBanner.caption}>#
+			<Banner image={aboutUsBanner} alt={aboutUsBanner.caption}>
                 <Heading title={aboutUsBanner.title} subTitle={aboutUsBanner.subTitle} />
             </Banner>
 			<TextContent content={aboutUsBanner.text} type='important'/>

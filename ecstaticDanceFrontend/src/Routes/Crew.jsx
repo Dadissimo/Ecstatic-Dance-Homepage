@@ -12,7 +12,7 @@ const Crew = function({siteData}) {
     if (!djs) return null;
 	const {crewBanner} = siteData;
 
-    const artists = djs.map(dj => <CrewMember key={dj._id} crewMember={dj} />);
+    const artists = djs.sort((a, b) => a.sortNumber - b.sortNumber).map(dj => <CrewMember key={dj._id} crewMember={dj} />);
 
 	return (
 		<>

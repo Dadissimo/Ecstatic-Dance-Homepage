@@ -12,12 +12,13 @@ const Events = function({banner}) {
     const [events] = useData('*[_type == "event"] | order(startDate desc) {...,dj->,location->}');
     if (!events) return null;
 
+    console.log(events);
     const currentEvent = events[0];
     const previousEvents = events.filter(event => event._id !== currentEvent._id);
 
     return (
         <>
-            <Banner image={banner} alt={banner.caption}>#
+            <Banner image={banner} alt={banner.caption}>
                 <Heading title={banner.title} subTitle={banner.subTitle} />
             </Banner>
             <div className="flex justify-center h-full">
