@@ -33,7 +33,7 @@ const EventSummary = function({event, color = 'pink-950'}) {
             <h1 className='text-2xl mb-4'>
                 {title}
             </h1>
-            <h2 className='flex flex-row xl:w-3/5 justify-between text-md sm:text-lg'>
+            <h2 className='flex flex-row xl:w-4/5 justify-between text-md sm:text-lg'>
                 <div className='flex flex-col'>
                     <div>{'WHEN'}</div>
                     <div>{'WHO'}</div>

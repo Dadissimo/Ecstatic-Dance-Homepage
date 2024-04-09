@@ -23,7 +23,7 @@ const Events = function({banner}) {
             </Banner>
             <div className="flex justify-center h-full">
                 <div className="flex flex-col xl:flex-row sm:w-8/12">
-                    <div className="rounded-md m-4 bg-gray-700 sm:w-8/12">
+                    <div className="rounded-md m-4 bg-gray-700 xl:w-8/12">
                         <EventSummary event={currentEvent} color="none" />
                     </div>
                     <div className="flex flex-1 flex-grow rounded-md m-4 bg-gray-700 justify-center xl:justify-normal">

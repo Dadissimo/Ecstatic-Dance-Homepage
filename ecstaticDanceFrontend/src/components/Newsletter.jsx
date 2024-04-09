@@ -4,9 +4,9 @@ export default function Newsletter() {
         <div className="flex justify-center m-4 sm:mt-16">
             <div className="flex flex-col lg:flex-row">
                 <div className="max-w-xl lg:max-w-lg">
-                    <h2 className="text-2xl text-center mb-4 font-bold tracking-tight text-white sm:text-2xl">
+                    <div className="text-2xl text-center mb-4 font-bold tracking-tight text-white sm:text-2xl">
                         {'Subscribe here to stay informed!'}
-                    </h2>
+                    </div>
                 </div>
                 <div className="flex sm:ml-10 mb-4 sm:mb-10 flex-col sm:flex-row">
                     <label htmlFor="email-address" className="sr-only">
