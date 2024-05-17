@@ -12,7 +12,7 @@ const NextDance = function({nextDate}) {
             <div className='text-white text-xl sm:text-4xl uppercase mb-1'>
                 {'Next dance'}
             </div>
-            <div className='text-white text-3xl sm:text-8xl uppercase mb-1'>
+            <div className='text-white text-3xl sm:text-8xl uppercase mb-4'>
                 {formattedDate}
             </div>
             <a

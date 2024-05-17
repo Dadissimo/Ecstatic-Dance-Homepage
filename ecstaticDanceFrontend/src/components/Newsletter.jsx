@@ -5,7 +5,7 @@ export default function Newsletter() {
             <div className="flex flex-col lg:flex-row">
                 <div className="max-w-xl lg:max-w-lg">
                     <div className="text-2xl text-center mb-4 font-bold tracking-tight text-white sm:text-2xl">
-                        {'Subscribe here to stay informed!'}
+                        {'Stay informed!'}
                     </div>
                 </div>
                 <div className="flex sm:ml-10 mb-4 sm:mb-10 flex-col sm:flex-row">
@@ -21,7 +21,7 @@ export default function Newsletter() {
                             autoComplete="email"
                             required
                             style={{width: 300}}
-                            placeholder="Enter you email"
+                            placeholder="Enter your email"
                         />
                     </div>
                     <button

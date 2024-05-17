@@ -12,7 +12,7 @@ const navigation = [
 
 export default function NavigationNew() {
 	return (
-		<div className="flex sticky z-50 top-0 items-center justify-between bg-gray-900 p-4 sm:px-16">
+		<div className="flex shadow-2xl sticky z-50 top-0 items-center justify-between bg-gray-900 p-4 sm:px-16">
 			<HomeIcon />
 			<nav>
 				<MobileNavigation navigation={navigation} />
