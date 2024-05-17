@@ -30,7 +30,7 @@ const Home = function({siteData}) {
 							{homeBanner.subTitle}
 						</h2>
 						<div className='mt-8 sm:mt-20'>
-							<NextDance nextDate={date} />
+							<NextDance nextDate={date} tbaMode={siteData.tbaMode} />
 						</div>
 						<div className='bg-gray-900 rounded-md mt-24 lg:mt-6 opacity-95'>
 							<Newsletter />

@@ -25,7 +25,7 @@ export default function App() {
 					<Home siteData={siteData} />
 				} />
 				<Route path='/events' element={
-					<Events banner={siteData.eventBanner} />
+					<Events siteData={siteData} />
 				} />
 				<Route path='/info' element={
 					<Info banner={siteData.danceInfoBanner}/>

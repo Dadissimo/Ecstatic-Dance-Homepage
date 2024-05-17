@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline'
 
 
-const NextDance = function({nextDate}) {
+const NextDance = function({nextDate, tbaMode}) {
     const date = new Date(nextDate);
     const formatter = new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
     const formattedDate = formatter.format(date);
@@ -13,7 +13,7 @@ const NextDance = function({nextDate}) {
                 {'Next dance'}
             </div>
             <div className='text-white text-3xl sm:text-8xl uppercase mb-4'>
-                {formattedDate}
+                {tbaMode ? 'To Be Announced' : formattedDate}
             </div>
             <a
                 href='/events'
@@ -26,7 +26,8 @@ const NextDance = function({nextDate}) {
 }
 
 NextDance.propTypes = {
-    nextDate: PropTypes.instanceOf(Date)
+    nextDate: PropTypes.instanceOf(Date),
+    tbaMode: PropTypes.bool
 }
 
 export default NextDance;
