@@ -10,6 +10,7 @@ import Crew from './Routes/Crew';
 import Contact from './Routes/Contact';
 import AboutUs from './Routes/AboutUs';
 import Navigation from './components/navigation/Navigation';
+import LegalNotice from './Routes/LegalNotice';
 
 export default function App() {
   const [siteData] = useData('*[_type == "siteSettings"][0]');
@@ -38,6 +39,9 @@ export default function App() {
 				} />
 				<Route path='/contact' element={
 					<Contact banner={siteData.contactBanner} />
+				} />
+				<Route path='/legalnotice' element={
+					<LegalNotice />
 				} />
 				<Route path='*' element={
 					<NoPage/>

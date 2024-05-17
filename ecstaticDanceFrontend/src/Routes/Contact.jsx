@@ -22,8 +22,13 @@ const Contact = ({banner}) => {
             <div className='bg-gray-900 rounded-md mt-24 lg:mt-6 opacity-95'>
                 <Newsletter />
             </div>
-            <div className='bg-gray-900 pb-16'>
+            <div className='bg-gray-900 pb-8'>
                 <TextContent content={banner.text} type='important'/>
+            </div>
+            <div className="flex justify-center pb-8">
+                <a href='/legalnotice' className="text-lg text-center text-white">
+                    {'Disclaimer & Legal Notice'}
+                </a>
             </div>
         </>
     )

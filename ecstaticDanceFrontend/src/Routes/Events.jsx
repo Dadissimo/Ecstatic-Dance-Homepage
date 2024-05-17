@@ -23,7 +23,7 @@ const Events = function({siteData}) {
             <Banner image={eventBanner} alt={eventBanner.caption}>
                 <Heading title={eventBanner.title} subTitle={eventBanner.subTitle} />
             </Banner>
-            {siteData.tbaMode 
+            {siteData.tbaMode && siteData.announcement
                 ? 
                     <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-cyan-900 p-4 m-4 sm:mx-48`}>
                         <div className='text-lg py-4'>
