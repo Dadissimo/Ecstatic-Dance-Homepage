@@ -26,7 +26,7 @@ const Contact = ({banner}) => {
                 <TextContent content={banner.text} type='important'/>
             </div>
             <div className="flex justify-center pb-8">
-                <a href='/legalnotice' className="text-lg text-center text-white">
+                <a href='/legalnotice' className="text-lg text-center text-white underline">
                     {'Disclaimer & Legal Notice'}
                 </a>
             </div>
