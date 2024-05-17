@@ -10,7 +10,7 @@ export default function InfoBlock({title, content, picture}) {
                     {title}
                 </div>
                 <Image image={picture} alt={picture.caption} />
-                <div className="text-white text-md sm:text-lg leading-8 mt-4">
+                <div className="text-white text-md sm:text-lg leading-6 sm:leading-7 xl:leading-8 mt-4">
                     <TextContent content={content} />
                 </div>
             </div>

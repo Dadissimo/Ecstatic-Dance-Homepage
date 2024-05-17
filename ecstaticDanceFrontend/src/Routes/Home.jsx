@@ -23,7 +23,7 @@ const Home = function({siteData}) {
 				/>
 				<div className="flex justify-center justify-items-center mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="flex flex-col justify-center justify-items-center mx-auto max-w-4xl lg:mx-0">
-						<h1 className="text-center text-4xl font-bold tracking-tight text-white sm:text-8xl">
+						<h1 className="home-font text-center text-4xl font-bold tracking-tight text-white sm:text-8xl">
 							{homeBanner.title}
 						</h1>
 						<h2 className="mt-6 text-center text-2xl text-white hidden lg:block">

@@ -4,7 +4,13 @@
 }
 
 body {
-    font-family: 'Nunito Sans';
+    /* font-family: 'Nunito Sans' */
+    font-family: 'Niramit';
+    /* font-family: 'Balthazar'; */
+}
+
+.home-font {
+    /* font-family: 'Major Mono Display'; */
 }
 
 .text-content {

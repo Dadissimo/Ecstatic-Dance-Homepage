@@ -32,7 +32,7 @@ const Events = function({banner}) {
                 </div>
             </div>
             {
-                currentEvent.news && <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-pink-700 p-4 m-4 sm:mx-48`}>
+                currentEvent.news && <div className={`flex text-white rounded-md flex-col justify-self-center items-center bg-cyan-900 p-4 m-4 sm:mx-48`}>
                     <div className='text-lg py-4'>
                         <TextContent content={currentEvent.news} />
                     </div>

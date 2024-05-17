@@ -26,7 +26,7 @@ export default function Newsletter() {
                     </div>
                     <button
                         type="submit"
-                        className="mt-4 sm:ml-4 sm:mt-0 flex-none rounded-md bg-pink-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-300 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500"
+                        className="mt-4 sm:ml-4 sm:mt-0 flex-none rounded-md bg-cyan-900 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-cyan-300 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500"
                     >
                     {'Subscribe'}
                     </button>
