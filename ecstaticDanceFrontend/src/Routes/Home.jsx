@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import useData from '../components/useData';
 import NextDance from '../components/NextDance';
+import { useOutletContext } from 'react-router-dom'
 // import EventSummary from '../components/EventSummary';
 import Newsletter from '../components/Newsletter';
 import urlFor from '../urlFor';
 
 
-const Home = function({siteData}) {
+const Home = function() {
+	const siteData = useOutletContext()
+
 	const {homeBanner} = siteData;
 	const[event] = useData('*[_type == "event"] | order(startDate desc)[0]{...,dj->,location->}');
 
