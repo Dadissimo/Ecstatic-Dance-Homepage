@@ -14,6 +14,8 @@ body {
 }
 
 .text-content {
+    width: 100%;
+    
     h1 {
         margin-top: 0.3em !important;
         font-size: 2em !important;
@@ -36,16 +38,17 @@ body {
     }
     
     ul {
+        margin-top: 1em !important;
         padding-left: 2em !important;
     }
-}
 
-.text-content p {
-    margin: 8px
-}
+    p {
+        margin: 1em;
+    }
 
-.text-content li {
-    list-style-type: disc;
+    li {
+        list-style-type: disc;
+    }
 }
 
 .hideMenuNav {
