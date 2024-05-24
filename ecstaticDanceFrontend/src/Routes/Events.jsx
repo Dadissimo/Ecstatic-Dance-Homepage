@@ -14,7 +14,6 @@ const Events = function({siteData}) {
 
     const {eventBanner} = siteData;
 
-    console.log(events);
     const currentEvent = events[0];
     const previousEvents = events.filter(event => event._id !== currentEvent._id);
 

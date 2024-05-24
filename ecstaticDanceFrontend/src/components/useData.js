@@ -18,7 +18,6 @@ export default function useData(query) {
   
             const {result} = await response.json();
             setData(result);
-            console.log('data arrived', result);
         };
         fetchData();
     }, [URL]);

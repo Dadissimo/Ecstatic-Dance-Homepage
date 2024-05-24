@@ -26,7 +26,6 @@ const EventSummary = function({event, color = 'pink-950'}) {
     const locationStamp = `${location.name}`;
 
     const djHref = getHref(event);
-    console.log(djHref);
 
     return (
         <div className={`flex text-white rounded-xl flex-col bg-${color} p-4 m-4`}>
