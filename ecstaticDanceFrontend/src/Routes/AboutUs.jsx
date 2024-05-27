@@ -6,8 +6,10 @@ import InfoBlock from "../components/InfoBlock";
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
 import TextContent from '../components/TextContent';
+import { useOutletContext } from 'react-router-dom';
 
-const AboutUs = function({siteData}) {
+const AboutUs = function() {
+	const siteData = useOutletContext();
 	const {aboutUsBanner} = siteData;
 	const[aboutUs] = useData('*[_type == "aboutUs"]');
 

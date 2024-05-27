@@ -5,8 +5,10 @@ import CrewMember from '../components/CrewMember';
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
 import TextContent from '../components/TextContent';
+import { useOutletContext } from 'react-router-dom';
 
-const Crew = function({siteData}) {
+const Crew = function() {
+	const siteData = useOutletContext();
 	const[djs] = useData('*[_type == "crewMember" && isGuest != true] | {...,role->}');
 	
     if (!djs) return null;

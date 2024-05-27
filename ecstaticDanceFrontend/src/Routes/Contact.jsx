@@ -6,12 +6,14 @@ import Banner from '../components/Banner';
 import Heading from '../components/Heading';
 import Newsletter from '../components/Newsletter';
 import TextContent from '../components/TextContent';
+import { useOutletContext } from 'react-router-dom';
 
-const Contact = ({banner}) => {
+const Contact = () => {
+    const {contactBanner} = useOutletContext()
     return (
         <>
-            <Banner image={banner} alt={banner.caption}>
-                <Heading title={banner.title} subTitle={banner.subTitle}/>
+            <Banner image={contactBanner} alt={contactBanner.caption}>
+                <Heading title={contactBanner.title} subTitle={contactBanner.subTitle}/>
                 <div className='mt-4 flex justify-center items-center'>
                     <FontAwesomeIcon fixedWidth color='white' size='xl' icon={faEnvelope} />
                     <a href='mailto:"info@ecstaticdance-graz.at"' className="ml-1 font-light text-center text-white sm:text-xl">
@@ -23,7 +25,7 @@ const Contact = ({banner}) => {
                 <Newsletter />
             </div>
             <div className='bg-gray-900 pb-8'>
-                <TextContent content={banner.text} type='important'/>
+                <TextContent content={contactBanner.text} type='important'/>
             </div>
             <div className="flex justify-center pb-8">
                 <a href='/legalnotice' className="text-lg text-center text-white underline">

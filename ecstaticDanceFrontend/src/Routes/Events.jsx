@@ -7,8 +7,10 @@ import Location from "../components/Location";
 import Banner from '../components/Banner';
 import Heading from '../components/Heading';
 import TextContent from '../components/TextContent';
+import { useOutletContext } from 'react-router-dom';
 
-const Events = function({siteData}) {
+const Events = function() {
+    const siteData = useOutletContext()
     const [events] = useData('*[_type == "event"] | order(startDate desc) {...,dj->,location->}');
     if (!events) return null;
 
