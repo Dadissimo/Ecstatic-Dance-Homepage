@@ -39,7 +39,7 @@ export default function Newsletter() {
     }
 
     const data = {
-        access_token: "j5u5bexg778jqqaa4099v3ls",
+        access_token: "pc29enwcvxnoyc60gt4rmtve",
         subject: `New Subscription: ${email}`,
         text: `${email} wants to subscribe to the Ecstatic Dance Newsletter!`
     };

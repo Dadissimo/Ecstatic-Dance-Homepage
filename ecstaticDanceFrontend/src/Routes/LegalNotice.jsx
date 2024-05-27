@@ -8,7 +8,7 @@ export default function LegalNotice() {
                 <p className="text-white mb-4">
                     Für den Inhalt und i.S. des Datenschutzgesetzes verantwortlich: <br/>
                     Mag.(FH) Gabriella Dokter <br/>
-                    Schöckelbachweg 55b/1 8045 Graz <br/>
+                    8045 Graz <br/>
                     Einzelunternehmerin als Neue Selbständige in den Bereichen Tanz-, Ausdrucks- und Bewegungspädagogik, sowie Pilates 
                 </p>    
                 <p className="text-white mb-4">
