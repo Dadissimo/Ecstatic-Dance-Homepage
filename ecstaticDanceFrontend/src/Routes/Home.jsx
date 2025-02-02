@@ -35,7 +35,7 @@ const Home = function() {
 						<div className='mt-8 sm:mt-20'>
 							<NextDance nextDate={date} tbaMode={siteData.tbaMode} />
 						</div>
-						<div className='bg-gray-900 rounded-md mt-24 lg:mt-6 opacity-95'>
+						<div className='mt-24 lg:mt-6'>
 							<Newsletter />
 						</div>
 					</div>
