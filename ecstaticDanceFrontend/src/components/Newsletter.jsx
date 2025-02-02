@@ -21,11 +21,13 @@ export default function Newsletter() {
         
         if (errored) return 'Subscribing failed! Please contact us via email';
         // if (success) return 'Subscribed successfully!';
+        if (!email && !name) return 'Enter an email & name'
+        if (!email) return 'Enter an email';
         if (!isValidEmail) return 'Invalid email';
         if (!name) return 'Enter a name';
     }
 
-    const buttonClassBase = 'mt-4 sm:mt-0 flex-none rounded-md shadow-sm px-3.5 py-2.5 text-sm font-semibold ';
+    const buttonClassBase = 'mt-0 flex-none rounded-md shadow-sm px-3.5 py-2.5 text-sm font-semibold ';
     const buttonClassColor = isValidEmail && name && !success
         ? 'text-white bg-cyan-900 hover:bg-cyan-300 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500'
         : 'text-slate-200 bg-cyan-900';
@@ -81,23 +83,22 @@ export default function Newsletter() {
     return (
         <div className="flex justify-center m-4">
             <div className="bg-gray-900 opacity-95 flex flex-col mb-4 p-4 rounded-md">
-                <div className="flex flex-col">
-                    <div className="text-2xl text-center mb-4 font-bold tracking-tight text-white sm:text-2xl">
-                        {'Stay informed!'}
+                <div className="flex sm:flex-row flex-col">
+                    <div className="my-2 ml-2">
+                        <input
+                            value={email}
+                            onChange={event => handleChange(event, setEmail)}
+                            onBlur={handleBlur}
+                            className="min-w-0 rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                            id="email-address"
+                            type="email"
+                            autoComplete="email"
+                            required
+                            style={{width: 250}}
+                            placeholder="Enter your email"
+                        />
                     </div>
-                    <input
-                        value={email}
-                        onChange={event => handleChange(event, setEmail)}
-                        onBlur={handleBlur}
-                        className="min-w-0 rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                        id="email-address"
-                        type="email"
-                        autoComplete="email"
-                        required
-                        style={{width: 300}}
-                        placeholder="Enter your email"
-                    />
-                    <div className="my-2">
+                    <div className="my-2 ml-2">
                         <input
                             value={name}
                             onChange={event => handleChange(event, setName)}
@@ -106,17 +107,19 @@ export default function Newsletter() {
                             id="name"
                             autoComplete="given-name"
                             required
-                            style={{width: 300}}
+                            style={{width: 250}}
                             placeholder="Enter your name"
                         />
                     </div>
-                    <button
-                        disabled={!isValidEmail || loading || success || errored || !name }
-                        onClick={ sendEmail }
-                        className={ buttonClass }
-                    >
-                        {success ? 'Subscribed successfully!' : 'Subscribe'}
-                    </button>
+                    <div className="my-2 ml-2 text-center">
+                        <button
+                            disabled={!isValidEmail || loading || success || errored || !name }
+                            onClick={ sendEmail }
+                            className={ buttonClass }
+                        >
+                            {success ? 'Subscribed successfully!' : 'Stay Informed!'}
+                        </button>
+                    </div>
                 </div>
                 <div className="flex h-4 text-sm justify-center flex-row text-red-500">
                     {getInfoText()}
