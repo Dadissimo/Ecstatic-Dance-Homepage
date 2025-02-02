@@ -21,7 +21,7 @@ const Contact = () => {
                     </a>
                 </div>
             </Banner>
-            <div className='bg-gray-900 rounded-md mt-24 lg:mt-6 opacity-95'>
+            <div className='bg-gray-900 rounded-md mt-6 opacity-95'>
                 <Newsletter />
             </div>
             <div className='bg-gray-900 pb-8'>
